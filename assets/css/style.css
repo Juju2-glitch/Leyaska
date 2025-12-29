@@ -17,7 +17,7 @@
     
     /* Fondo y Superficies */
     --background: #0f0d0d;     /* Casi negro con un toque de calidez */
-    --card-bag: #1c1414;       /* Marrón muy oscuro/carbón para tarjetas */
+    --card-bag: #1c141498;       /* Marrón muy oscuro/carbón para tarjetas */
     --input-bg: #251b1b;       /* Fondo de inputs sutilmente más claro */
     
     /* Colores de Texto (Inspirados en papel antiguo) */
@@ -41,7 +41,6 @@ body{
 
 
 /*barra lateral*/
-
 
 aside{
     display: flex;
@@ -153,3 +152,81 @@ main > section:nth-child(1) p{
     color: var(--primary-light);
     font-weight: 500;
 }
+
+
+/* Modal container*/
+
+.modal-container{
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--card-bag);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.2s ease;
+}
+
+.modal-container.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-container .modal{
+    background-color: var(--primary-hover);
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    h2{
+        margin-bottom: 20px;
+        color: var(--text-primary);
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    form{
+        color: var(--text-secondary);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        input{
+            border: none;
+            border-radius: 3px;
+            color: var(--text-muted);
+            background-color: var(--card-bag);
+            padding: 5px;
+            font-size: 1rem;
+        }
+    }
+
+}
+
+.botones{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    button{
+        border: none;
+        font-family: inherit;
+        background-color: var(--botonheader);
+        color: var(--text-secondary);
+        font-size: 1rem;
+        border-radius: 5px;
+        padding: 5px 15px;
+    }
+}
+
+
