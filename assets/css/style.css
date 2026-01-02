@@ -48,6 +48,8 @@ aside{
     padding: 1.6rem;
 
     padding-top: 4rem;
+
+    margin-left: 1rem;
 }
 
 aside nav{
@@ -123,6 +125,7 @@ main{
     max-width: 800px;
     margin: auto;
     margin-top: 0;
+    margin-left: 7rem;
 }
 
 
@@ -132,26 +135,86 @@ main>section:nth-child(1){
     justify-content: center;
     min-height: 200px;
     margin-top: 6rem;
-    max-width: 500px;
+    max-width: 550px;
 
 }
 
 main>section:nth-child(1) h1{
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 5rem;
+    line-height: 5rem;
     color: var(--text-primary);
 
     span{
-        font-size: 5rem;
+        font-size: 6rem;
         font-weight: 900;
     }
 }
 
 main > section:nth-child(1) p{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--primary-light);
     font-weight: 500;
 }
+
+
+
+
+
+main > section:nth-child(2){
+    max-width: 600px;
+
+    margin-top: 3rem;
+
+    
+
+}
+
+main > section:nth-child(2) h2{
+    color: var(--background);
+    background-color: var(--primary-light);
+    font-size: 1.7rem;
+    width: 15rem;
+}
+
+
+main > section:nth-child(2) ul {
+    list-style-type: none;
+}
+
+main > section:nth-child(2) footer {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    align-items: center;
+}
+
+main > section:nth-child(2) footer ul li{
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+
+    span{
+        text-align: center;
+    }
+    div{
+        max-height: 24px;
+        text-align: center;
+    }
+    div svg{
+        stroke-width: 3px;
+        height: 24px;
+    }
+}
+
+main > footer{
+    color: var(--text-muted);
+    text-align: center;
+
+    margin-top: 5rem;
+}
+
 
 
 /* Modal container*/
@@ -183,6 +246,8 @@ main > section:nth-child(1) p{
     background-color: var(--primary-hover);
     width: 600px;
     max-width: 100%;
+
+    max-height: 100vh;
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -230,3 +295,46 @@ main > section:nth-child(1) p{
 }
 
 
+
+
+
+
+
+
+
+#lista-titulos {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+#lista-titulos li {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+#lista-titulos li:hover {
+    color: var(--primary-light);
+    padding-left: 10px; /* Efecto de desplazamiento */
+}
+
+.detalle-libro {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.botoes{
+    border: none;
+    font-family: inherit;
+    background-color: var(--botonheader);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 15px; 
+}
